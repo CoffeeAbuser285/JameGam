@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 610e1cfbcce31e94f93ee1bd91948a55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 10
+  scrollSpeed: 1
   startY: 20.4
   resetY: 20.4
 --- !u!1001 &9114033806691178173
