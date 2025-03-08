@@ -7,6 +7,7 @@ public class PlayerLaserController : MonoBehaviour
     public float laserSpeed = -5f; // Speed at which the laser moves
     public float laserLifetime = 2f; // How long the laser lasts before being destroyed
     public int damage = 1;
+    public float launchAngle = 30f;
     private Collider2D laserCollider;
 
     // Start is called before the first frame update
@@ -26,6 +27,9 @@ public class PlayerLaserController : MonoBehaviour
                 Physics2D.IgnoreCollision(laserCollider, playerCollider); 
             }
         }
+
+        // Changing to desired Angle
+        transform.rotation = Quaternion.Euler(0, 0, launchAngle);
 
         Destroy(gameObject, laserLifetime);
     }

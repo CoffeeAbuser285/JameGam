@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FireLaser : MonoBehaviour
 {
-    public GameObject laserPrefab; // The laser prefab
+    public GameObject[] laserPrefab; // The laser prefab
     public Transform laserSpawnPoint; // Point from where the laser will spawn
     public float yAxisShift = 0.2f;
     public int damage = 1;
@@ -32,6 +32,9 @@ public class FireLaser : MonoBehaviour
     void ShootLaser()
     {
         Vector3 spawnPosition = laserSpawnPoint.position + new Vector3(0, yAxisShift, 0);
-        Instantiate( laserPrefab, spawnPosition, Quaternion.identity);
+
+        Instantiate( laserPrefab[0], spawnPosition, Quaternion.identity);
+        Instantiate( laserPrefab[1], spawnPosition, Quaternion.identity);
+        Instantiate( laserPrefab[2], spawnPosition, Quaternion.identity);
     }
 }
