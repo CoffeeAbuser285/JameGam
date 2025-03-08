@@ -166,7 +166,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f075379cf26aefe4790d9967734b48ad
+      spriteID: 8c74f29803016224c9145f3a6ad3e4bd
       internalID: 1385934680
       vertices: []
       indices: 
@@ -187,7 +187,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f7b9617f573c924a887187135226065
+      spriteID: 522753b55fa581341aff3d8b5f469129
       internalID: 686766847
       vertices: []
       indices: 
@@ -208,7 +208,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98e2aa76911ea494b878f6eedc309b55
+      spriteID: 01d54138f4437544e89199b9b8eab327
       internalID: -710787130
       vertices: []
       indices: 
@@ -216,6 +216,90 @@ TextureImporter:
       weights: []
     - serializedVersion: 2
       name: shipSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea010a0a9d7f91946b96e8b3ae326e2f
+      internalID: 2097648921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shipSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952de51f48d53eb4199a57815e9d8abd
+      internalID: -1263645080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shipSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8d0a6e98bff8742a1c0c0fefd81247
+      internalID: -1664278365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shipSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94dfa57d28fcad4f8bda23180e88baa
+      internalID: -1973312616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shipSpriteSheet_9
       rect:
         serializedVersion: 2
         x: 0
@@ -229,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0532e7b7f5d4a1945b69d2567a4d19ef
-      internalID: 2097648921
+      spriteID: c1700edbc7f667c4cafe6668d3675124
+      internalID: 795299097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shipSpriteSheet_6
+      name: shipSpriteSheet_10
       rect:
         serializedVersion: 2
         x: 64
@@ -250,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ef9b8e8916468446b24818d4fd370d9
-      internalID: -1263645080
+      spriteID: e7ed1bccc91031f41b561831c2eabc17
+      internalID: -1544409334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shipSpriteSheet_7
+      name: shipSpriteSheet_11
       rect:
         serializedVersion: 2
         x: 128
@@ -271,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2baaf528144a7b84f877be4536e9add3
-      internalID: -1664278365
+      spriteID: 9a940846385f7944b8393d4a804e6cd1
+      internalID: -1403300563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shipSpriteSheet_8
+      name: shipSpriteSheet_12
       rect:
         serializedVersion: 2
         x: 192
@@ -292,14 +376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec7d1204330db0742bbbcc53f00a883a
-      internalID: -1973312616
+      spriteID: 5ad003f79aa63394e997e8a46e87a2e9
+      internalID: 1076680358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shipSpriteSheet_9
+      name: shipSpriteSheet_13
       rect:
         serializedVersion: 2
         x: 256
@@ -313,14 +397,98 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22572936db0a55b429100016c2ef9813
-      internalID: 795299097
+      spriteID: e3c819789b0e78843a06e196885bac39
+      internalID: -2129092955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shipSpriteSheet_10
+      name: shipSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de462f202aa42f4ca7fc2c351ba6e42
+      internalID: -1972853304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shipSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc22ab3c1b8be84a9eca4f53b15439d
+      internalID: 734939907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shipSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e970efa8bea2d468a2a0aeeae977f5
+      internalID: -809404922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shipSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f975c2082d55130448e89baf8c4615cf
+      internalID: -783229955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shipSpriteSheet_18
       rect:
         serializedVersion: 2
         x: 0
@@ -334,14 +502,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9491121d2361a734f9a6b1d0e7604e92
-      internalID: -1544409334
+      spriteID: 0eef1fd1501723844b6fda7ec03d012c
+      internalID: -872218211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shipSpriteSheet_11
+      name: shipSpriteSheet_19
       rect:
         serializedVersion: 2
         x: 64
@@ -355,14 +523,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 841eb2e95a8a9a34f8f6064d349f8f9b
-      internalID: -1403300563
+      spriteID: 7aa07eede520d504d97faafa648c91ba
+      internalID: 1305967114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shipSpriteSheet_12
+      name: shipSpriteSheet_20
       rect:
         serializedVersion: 2
         x: 128
@@ -376,17 +544,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03a4a5042e22f2f43821ff0b3fd5f7f9
-      internalID: 1076680358
+      spriteID: 7b3bc5525137ce7418fe6c7859f70dd2
+      internalID: -1070102258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shipSpriteSheet_13
+      name: shipSpriteSheet_21
       rect:
         serializedVersion: 2
-        x: 256
+        x: 512
         y: 448
         width: 64
         height: 64
@@ -397,8 +565,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bc48fbe4aaf7c34da86b268c62e7109
-      internalID: -2129092955
+      spriteID: 947e96a4630f2c940af7e16451b59524
+      internalID: 382949070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shipSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b97f5bca6930042884a588b2ef33c9
+      internalID: -803994502
       vertices: []
       indices: 
       edges: []
@@ -420,7 +609,16 @@ TextureImporter:
       shipSpriteSheet_11: -1403300563
       shipSpriteSheet_12: 1076680358
       shipSpriteSheet_13: -2129092955
+      shipSpriteSheet_14: -1972853304
+      shipSpriteSheet_15: 734939907
+      shipSpriteSheet_16: -809404922
+      shipSpriteSheet_17: -783229955
+      shipSpriteSheet_18: -872218211
+      shipSpriteSheet_19: 1305967114
       shipSpriteSheet_2: 1385934680
+      shipSpriteSheet_20: -1070102258
+      shipSpriteSheet_21: 382949070
+      shipSpriteSheet_22: -803994502
       shipSpriteSheet_3: 686766847
       shipSpriteSheet_4: -710787130
       shipSpriteSheet_5: 2097648921
