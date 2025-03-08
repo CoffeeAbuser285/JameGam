@@ -363,7 +363,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1360177507355695743, guid: 37fc0e04ebb800543a7c18ebb9a5db35, type: 3}
       propertyPath: spawnIntervalDecrease
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6457389170894833482, guid: 37fc0e04ebb800543a7c18ebb9a5db35, type: 3}
       propertyPath: m_Name
@@ -422,6 +422,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4411279328037982890, guid: 1d49391d9c436564db1ea01a8c7940f7, type: 3}
+      propertyPath: laserPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 4484943637264005939, guid: a3fa455de1af36341b544ca9a48e9913, type: 3}
+    - target: {fileID: -4411279328037982890, guid: 1d49391d9c436564db1ea01a8c7940f7, type: 3}
+      propertyPath: laserPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 4484943637264005939, guid: 964ac902dcebc0640b54fdc44c4226b8, type: 3}
     - target: {fileID: 18900826749212880, guid: 1d49391d9c436564db1ea01a8c7940f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.005585894
