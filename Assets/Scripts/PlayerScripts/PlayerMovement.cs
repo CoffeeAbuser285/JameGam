@@ -69,13 +69,6 @@ public class PlayerMovement : MonoBehaviour
         float screenBottom = -halfHeight;
         float screenTop = halfHeight;
 
-        // Only update position if it's out of bounds, otherwise let the player move freely
-        Debug.Log(screenLeft);
-        Debug.Log(screenRight);
-        Debug.Log(screenTop);
-        Debug.Log(screenBottom);
-        Debug.Log(currentPosition);
-
         if (currentPosition.x < screenLeft)
         {
             currentPosition.x = screenLeft;

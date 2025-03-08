@@ -47,8 +47,6 @@ public class UiManager : MonoBehaviour
     private void UpdateHealthUI()
     {
         healthBar.value = player.GetComponent<Health>().getCurrentHealth();  // Update the health slider value
-        Debug.Log(healthBar.value);
-        Debug.Log(player.GetComponent<Health>().getCurrentHealth());
     }
 
     private void UpdateTimerUI()
