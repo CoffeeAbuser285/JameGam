@@ -6,8 +6,8 @@ public class EnemyFireScript : MonoBehaviour
 {
     public GameObject laserPrefab; // The laser prefab
     public Transform laserSpawnPoint; // Point from where the laser will spawn
-    public float xAxisShift = 0.1f;
-    public float yAxisShift = 0.2f;
+    public float xAxisShift = 0f;
+    public float yAxisShift = 0f;
     public int damage = 1;
     public float fireRate = 0.5f;    
     private float nextFireTime = 0f;
@@ -33,6 +33,13 @@ public class EnemyFireScript : MonoBehaviour
     void ShootLaser()
     {
         Vector3 spawnPosition = laserSpawnPoint.position + new Vector3(xAxisShift, yAxisShift, 0);
-        Instantiate( laserPrefab, spawnPosition, Quaternion.identity);
+        GameObject bullet = Instantiate( laserPrefab, spawnPosition, laserSpawnPoint.rotation);
+
+                // Apply velocity to the bullet
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = laserSpawnPoint.up * bullet.GetComponent<EnemyLaserRotationControl>().laserSpeed; // Bullet moves in the direction the barrel is pointing
+        }
     }
 }

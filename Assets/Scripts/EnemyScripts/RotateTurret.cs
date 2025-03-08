@@ -28,9 +28,7 @@ public class RotateTurret : MonoBehaviour
 
         // Determining angle of rotation
         float turretTargetRotationDegrees = Mathf.Rad2Deg * Mathf.Atan2( ( turretPosition.y - playerPosition.y) , ( turretPosition.x - playerPosition.x) ) + degOffset;
-        Debug.Log(turretTargetRotationDegrees);
         float newAngle = Mathf.MoveTowardsAngle(turretCurrentRotationZ, turretTargetRotationDegrees, rotationSpeedDeg * Time.deltaTime);
-        Debug.Log(newAngle);
         transform.rotation = Quaternion.Euler( 0, 0, newAngle );
     }
 }
