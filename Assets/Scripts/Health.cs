@@ -44,6 +44,11 @@ public class Health : MonoBehaviour
         return currentHealth;
     }
 
+    public float getInitialHealth()
+    {
+        return initialHealth;
+    }
+
     public void setInitialHealth( float initHealth )
     {
         initialHealth = initHealth;

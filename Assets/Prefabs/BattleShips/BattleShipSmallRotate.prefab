@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: -434690720658458498}
   m_Layer: 0
   m_Name: BattleShipSmallRotate
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb57476e3c075743a6e49757db2bf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialHealth: 3
+  initialHealth: 5
 --- !u!61 &-189518765625338184
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -643,6 +643,10 @@ PrefabInstance:
     - target: {fileID: 7016176059255338479, guid: ff8c4f804532c0e44a1e40ec340b3ff8, type: 3}
       propertyPath: m_Name
       value: RotatingTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690845045926100608, guid: ff8c4f804532c0e44a1e40ec340b3ff8, type: 3}
+      propertyPath: rotationSpeedDeg
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

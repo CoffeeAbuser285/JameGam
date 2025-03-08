@@ -7,7 +7,7 @@ public class SpawnEnemies : MonoBehaviour
     public GameObject[] enemyPrefabs; // The enemy prefab
     public Transform[] spawnPoints; 
     public float spawnInterval = 20f; // Initial spawn interval
-    public float spawnIntervalDecrease = 0.1f; // How much to decrease spawn interval over time
+    public float spawnIntervalDecrease = 0.05f; // How much to decrease spawn interval over time
     public float minimumSpawnInterval = 5f; // The minimum spawn interval
     private float gameTime = 0f; // To track how long the game has been running
 
@@ -30,11 +30,10 @@ public class SpawnEnemies : MonoBehaviour
     {
         while (true)
         {
+            SpawnEnemy();
+
             // Wait for the current spawn interval
             yield return new WaitForSeconds( spawnInterval );
-
-            // Spawn an enemy
-            SpawnEnemy();
         }
     }
 
@@ -52,7 +51,9 @@ public class SpawnEnemies : MonoBehaviour
         if (enemy != null)
         {
             float difficultyFactor = 1 + gameTime / 100f; // Example difficulty scaling with time
-            float health = enemy.GetComponent<Health>().getCurrentHealth() * difficultyFactor;
+            float health = enemy.GetComponent<Health>().getInitialHealth() * difficultyFactor;
+            Debug.Log("Setting Health");
+            Debug.Log(health);
             enemy.GetComponent<Health>().setInitialHealth( health );
         }
     }

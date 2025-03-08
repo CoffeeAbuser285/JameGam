@@ -28,7 +28,7 @@ public class EnemyLaserRotationControl : MonoBehaviour
         {
             Collider2D enemyCollider = enemy.GetComponent<Collider2D>();
 
-            if ( enemy != null )
+            if ( enemyCollider != null )
             {
                 // Ignore collisions between the laser and the enemy
                 Physics2D.IgnoreCollision(laserCollider, enemyCollider); 
