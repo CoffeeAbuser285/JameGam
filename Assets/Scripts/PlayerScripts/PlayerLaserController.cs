@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserController : MonoBehaviour
+public class PlayerLaserController : MonoBehaviour
 {
     public float laserSpeed = -5f; // Speed at which the laser moves
     public float laserLifetime = 2f; // How long the laser lasts before being destroyed
@@ -36,15 +36,15 @@ public class LaserController : MonoBehaviour
         transform.Translate(Vector2.up * laserSpeed * Time.deltaTime);
     }
 
-    void OnTriggerEnter2D( Collider2D colider)
+    void OnTriggerEnter2D( Collider2D collider)
     {
-        Health objectHealth = colider.gameObject.GetComponent<Health>();
-        
+        Health objectHealth = collider.gameObject.GetComponent<Health>();
+        Debug.Log("got a hit!");
         // If player health exists and the object firing the laser is not the one being hit
-        if ( objectHealth != null && colider.CompareTag("Enemy") ) 
+        if ( objectHealth != null && collider.CompareTag("Enemy") ) 
         {
             objectHealth.TakeDamage( damage );
-            Debug.Log("Took a hit of damage");
+            Debug.Log("Enemy Took a hit of damage");
         }
 
         // Destroying laser
