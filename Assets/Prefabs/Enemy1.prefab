@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3566470746342576434}
   - component: {fileID: -4213385112631040144}
   - component: {fileID: 2600691328532076852}
+  - component: {fileID: -4811825973712008226}
   - component: {fileID: 4846519999649625388}
   - component: {fileID: 1827260248012388786}
   m_Layer: 0
@@ -121,6 +122,19 @@ MonoBehaviour:
   yAxisShift: 10
   damage: 1
   fireRate: 0.5
+--- !u!114 &-4811825973712008226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7016176059255338479}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c6a7f96004e7614ca08388388b5e665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: -0.1
 --- !u!61 &4846519999649625388
 BoxCollider2D:
   m_ObjectHideFlags: 0
