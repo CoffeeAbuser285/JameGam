@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialHealth: 3
-  currentHealth: 0
+  currentHealth: 3
   isDead: 0
 --- !u!61 &-5339485660098922972
 BoxCollider2D:

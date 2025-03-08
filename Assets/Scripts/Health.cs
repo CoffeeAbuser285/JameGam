@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public float initialHealth = 3;
-    public float currentHealth;
-    public bool isDead;
+    public float initialHealth = 3f;
+    private float currentHealth = 3f;
+    private bool isDead;
 
     public void Start()
     {
@@ -36,6 +36,16 @@ public class Health : MonoBehaviour
             isDead = true;
         }
 
+        return isDead;
+    }
+
+    public float getCurrentHealth()
+    {
+        return currentHealth;
+    }
+
+    public bool getIsDead()
+    {
         return isDead;
     }
 
