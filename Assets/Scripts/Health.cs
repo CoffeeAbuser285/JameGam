@@ -4,71 +4,30 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public float initialHealth;
-    public float damageMultiplier = 1;
+    public float initialHealth = 3;
+    public float currentHealth;
+    public bool isDead;
 
-    private float m_CurrentHealth;
-    private bool m_IsDead;
-    private ParticleSystem m_HitPartices;
-    private bool m_IsActive;
-
-    public float health
+    public void Start()
     {
-        get => m_CurrentHealth;
-        set {
-            if (value > 0 && value < initialHealth) {
-                m_CurrentHealth = value;
-                m_IsDead = false;
-            }
-        }
+        currentHealth = initialHealth;
+        isDead = true;
     }
-
-    public bool isDead
+    
+    public void TakeDamage(int damage)
     {
-        get => m_IsDead;
+        currentHealth -= damage;
+        checkIfDead();
     }
 
-    public bool isActive
-    {
-        get => m_IsActive;
-        set {
-            m_IsActive = value;
-        }
-    }
-
-    void Awake()
-    {
-        m_HitPartices = GetComponent<ParticleSystem>();
-        m_IsActive = true;
-    }
-
-    void OnEnable()
-    {
-        m_CurrentHealth = initialHealth;
-        m_IsDead = false;
-    }
-
-    public void TakeHit(float ammount) {
-        if (!m_IsActive) return;
-
-        m_CurrentHealth -= ammount*damageMultiplier;
-        if (m_CurrentHealth <= 0) {
-            m_CurrentHealth = 0f;
-            m_IsDead = true;
-        }
-        // Debug.Log(m_CurrentHealth);
-    }
-
-    public void TakeHit(float ammount, Vector3 hitPoint) {
-        if (!m_IsActive) return;
-
-        if (m_HitPartices != null) {
-            m_HitPartices.transform.position = hitPoint;
-
-            m_HitPartices.Stop();
-            m_HitPartices.Play();
+    public bool checkIfDead()
+    {   
+        if (currentHealth <= 0)
+        {
+            isDead = true;
         }
 
-        TakeHit(ammount);
+        return isDead;
     }
+
 }
