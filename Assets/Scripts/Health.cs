@@ -11,7 +11,16 @@ public class Health : MonoBehaviour
     public void Start()
     {
         currentHealth = initialHealth;
-        isDead = true;
+        isDead = false;
+    }
+    
+    public void Update()
+    {
+        if ( isDead == true )
+        {
+            // Destroying self if dead
+            Destroy( gameObject );
+        }
     }
     
     public void TakeDamage(int damage)

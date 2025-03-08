@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -5339485660098922972}
   m_Layer: 0
   m_Name: PlayerShip_0
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,6 +167,7 @@ MonoBehaviour:
   laserPrefab: {fileID: 4484943637264005939, guid: 2cdcf1ecd349b164b8082beaeeb628c4, type: 3}
   laserSpawnPoint: {fileID: 18900826749212880}
   yAxisShift: 0.6
+  damage: 1
   fireRate: 0.2
 --- !u!114 &-3155677677610435967
 MonoBehaviour:
@@ -181,7 +182,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialHealth: 3
-  damageMultiplier: 1
+  currentHealth: 0
+  isDead: 0
 --- !u!61 &-5339485660098922972
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -211,7 +213,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

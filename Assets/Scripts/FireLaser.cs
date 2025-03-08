@@ -34,17 +34,4 @@ public class FireLaser : MonoBehaviour
         Vector3 spawnPosition = laserSpawnPoint.position + new Vector3(0, yAxisShift, 0);
         Instantiate( laserPrefab, spawnPosition, Quaternion.identity);
     }
-
-    void OnCollisionEnter2D( Collision2D collision)
-    {
-        Health objectHealth = collision.gameObject.GetComponent<Health>();
-        
-        if ( objectHealth != null )
-        {
-            objectHealth.TakeDamage( damage );
-        }
-
-        // Destroying laser
-        Destroy( gameObject );
-    }
 }
