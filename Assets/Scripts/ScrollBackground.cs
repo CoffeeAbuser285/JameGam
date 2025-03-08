@@ -16,8 +16,6 @@ public class ScrollBackground : MonoBehaviour
     void Start()
     {
         backgroundImage = GetComponent<Transform>();
-        //startY = backgroundImage.position.y;
-        //resetY = startY - distanceTravel;
     }
 
     // Update is called once per frame
@@ -25,7 +23,6 @@ public class ScrollBackground : MonoBehaviour
     {
         backgroundImage.position += Vector3.down * scrollSpeed * Time.deltaTime;
 
-        Debug.Log(backgroundImage.position.y);
         if (backgroundImage.position.y <= -resetY) {
             backgroundImage.position = new Vector3(transform.position.x, startY, transform.position.z);
         }
