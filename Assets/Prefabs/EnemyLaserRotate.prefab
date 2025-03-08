@@ -144,5 +144,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserSpeed: 4
-  laserLifetime: 2
+  laserLifetime: 4
   damage: 1
