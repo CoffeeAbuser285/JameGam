@@ -45,10 +45,8 @@ public class EnemyLaserStraightController : MonoBehaviour
         {
             objectHealth.TakeDamage( damage );
             Debug.Log("Took a hit of damage");
+            Destroy( gameObject );
         }
-
-        // Destroying laser
-        Destroy( gameObject );
     }
 
 }
