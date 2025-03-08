@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyLaserController : MonoBehaviour
+public class EnemyLaserStraightController : MonoBehaviour
 {
     public float laserSpeed = -5f; // Speed at which the laser moves
     public float laserLifetime = 2f; // How long the laser lasts before being destroyed

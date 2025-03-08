@@ -8,9 +8,12 @@ public class EnemyLaserRotationControl : MonoBehaviour
     public float laserLifetime = 2f; // How long the laser lasts before being destroyed
     public int damage = 1;
     public float rotationSpeedDeg = 90f;
+    public float homingDuration = 1f;
     private Collider2D laserCollider;
     private GameObject player;
     private float degOffset = -90f;
+    private float homingTimer = 0f;
+    private bool isHoming = true;
 
     // Start is called before the first frame update
     void Start()
@@ -57,16 +60,32 @@ public class EnemyLaserRotationControl : MonoBehaviour
     }
 
     void shootTowardPlayer()
-    {
-        Vector3 laserPosition = transform.position;
-        Vector3 playerPosition = player.transform.position;
+    {   
+        if ( isHoming )
+        {
+            Vector3 laserPosition = transform.position;
+            Vector3 playerPosition = player.transform.position;
 
-        transform.position = Vector2.MoveTowards(laserPosition, playerPosition, laserSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards( laserPosition, playerPosition, laserSpeed * Time.deltaTime );
 
-        // Determining angle of rotation
-        float laserCurrentRotationZ = transform.eulerAngles.z;
-        float laserTargetRotationDegrees = Mathf.Rad2Deg * Mathf.Atan2( ( laserPosition.y - playerPosition.y) , ( laserPosition.x - playerPosition.x) ) + degOffset;
-        float newAngle = Mathf.MoveTowardsAngle(laserCurrentRotationZ, laserTargetRotationDegrees, rotationSpeedDeg * Time.deltaTime);
-        transform.rotation = Quaternion.Euler( 0, 0, newAngle );
+            // Determining angle of rotation
+            float laserCurrentRotationZ = transform.eulerAngles.z;
+            float laserTargetRotationDegrees = Mathf.Rad2Deg * Mathf.Atan2( ( laserPosition.y - playerPosition.y ) , ( laserPosition.x - playerPosition.x ) ) + degOffset;
+            float newAngle = Mathf.MoveTowardsAngle( laserCurrentRotationZ, laserTargetRotationDegrees, rotationSpeedDeg * Time.deltaTime );
+            transform.rotation = Quaternion.Euler( 0, 0, newAngle );
+            
+            homingTimer += Time.deltaTime;
+
+            // If homing has lasted for the set duration, stop homing
+            if (homingTimer >= homingDuration)
+            {
+                isHoming = false;
+            }
+        }
+        else
+        {
+            transform.Translate( Vector2.down * laserSpeed * Time.deltaTime );
+        }
+
     }
 }

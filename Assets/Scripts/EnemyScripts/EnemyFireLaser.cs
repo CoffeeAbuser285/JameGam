@@ -35,7 +35,7 @@ public class EnemyFireScript : MonoBehaviour
         Vector3 spawnPosition = laserSpawnPoint.position + new Vector3(xAxisShift, yAxisShift, 0);
         GameObject bullet = Instantiate( laserPrefab, spawnPosition, laserSpawnPoint.rotation);
 
-                // Apply velocity to the bullet
+        // Apply velocity to the bullet
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
