@@ -22,9 +22,13 @@ public class AddPopup : MonoBehaviour
     private int addIndex;
 
     public bool ShowAdd(float targetTime, string extra)
-    {
+    {   
+        if ( !_active )
+        {
+            extraText.text = extra;
+        }  
+
         bool condition = ShowAdd(targetTime);
-        extraText.text = extra;
         return condition;
     }
 
@@ -33,7 +37,6 @@ public class AddPopup : MonoBehaviour
         if (_active || !_windowAnimator.GetCurrentAnimatorStateInfo(0).IsName("AddIdle")) {
             return false;
         }
-        extraText.text = "";
         _startTime = Time.time;
         _targetTime = Time.time + targetTime;
         _windowAnimator.SetBool("Open", true);
@@ -73,6 +76,7 @@ public class AddPopup : MonoBehaviour
         visible.SetActive(false);
         gameManager = GameObject.FindWithTag("GameManager");
         player = GameObject.FindWithTag("Player");
+        extraText.text = "";
     }
 
     // Update is called once per frame

@@ -53,7 +53,7 @@ public class SpawnEnemies : MonoBehaviour
 
         if (enemy != null)
         {
-            float difficultyFactor = 1 + gameTime / 100f; // Example difficulty scaling with time
+            float difficultyFactor = 1 + 3 * ( gameTime / 100f ); // Example difficulty scaling with time
             float health = enemy.GetComponent<Health>().getInitialHealth() * difficultyFactor;
             Debug.Log("Setting Health");
             Debug.Log(health);
