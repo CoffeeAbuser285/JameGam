@@ -345,10 +345,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Addspace
       objectReference: {fileID: 0}
-    - target: {fileID: 1794091046914197141, guid: 4d37814fc8c32cd45b5719af6ef151c8, type: 3}
-      propertyPath: m_Name
-      value: Window
-      objectReference: {fileID: 0}
     - target: {fileID: 4150376525333256111, guid: 4d37814fc8c32cd45b5719af6ef151c8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
