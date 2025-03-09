@@ -53,7 +53,7 @@ public class EnemyLaserRotationControl : MonoBehaviour
         {
             objectHealth.TakeDamage( damage );
             Debug.Log("Player Took a hit of damage");
-            
+
             // Destroying laser
             Destroy( gameObject );
         }
