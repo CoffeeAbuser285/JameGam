@@ -13,8 +13,6 @@ public class PlayerFireLaser : MonoBehaviour
     private float boostTime = 5f;
     private float multiplier;
 
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +42,8 @@ public class PlayerFireLaser : MonoBehaviour
     public void IncreaseFireRate( float mult )
     {
         multiplier = mult;
+
+        // Play FireRate Up Audio
 
         // Increasing FireRate
         fireRate = fireRate / multiplier;
