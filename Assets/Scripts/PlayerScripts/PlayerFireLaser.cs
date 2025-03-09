@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireLaser : MonoBehaviour
+public class PlayerFireLaser : MonoBehaviour
 {
     public GameObject[] laserPrefab; // The laser prefab
     public Transform laserSpawnPoint; // Point from where the laser will spawn
@@ -41,12 +41,12 @@ public class FireLaser : MonoBehaviour
         Instantiate( laserPrefab[2], spawnPosition, Quaternion.identity);
     }
 
-    void IncreaseFireRate( int mult )
+    public void IncreaseFireRate( float mult )
     {
         multiplier = mult;
 
         // Increasing FireRate
-        fireRate /= multiplier;
+        fireRate = fireRate / multiplier;
         StartCoroutine( DecreaseFireRate() );
     }
 
@@ -54,6 +54,6 @@ public class FireLaser : MonoBehaviour
     {
         yield return new WaitForSeconds( boostTime );
 
-        fireRate *= multiplier;
+        fireRate = fireRate * multiplier;
     }
 }
