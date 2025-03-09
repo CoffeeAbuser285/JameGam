@@ -14,6 +14,8 @@ public class Health : MonoBehaviour
     private GameObject canvas;
     private SpriteRenderer[] spriteRenderers;
     private TilemapRenderer[] tilemapRenderers;
+    private string[] items = { "Health", "Boost"};
+    private int num = 0;
 
     public void Start()
     {
@@ -84,7 +86,7 @@ public class Health : MonoBehaviour
         if ( gameObject.CompareTag("Player") )
         {
             if ( currentHealth > 0 )
-            {
+            {   
                 StartCoroutine( ShowAd() );
             }
             else
@@ -108,7 +110,15 @@ public class Health : MonoBehaviour
     private IEnumerator ShowAd()
     {   
         yield return null;
+
+        num  = Random.Range(0, 2);
+        //adCanvas.GetComponent<AddPopup>().ShowAdd( 5f, items[ num ] );
         adCanvas.GetComponent<AddPopup>().ShowAdd( 5f );
+    }
+
+    private void AddHealth( int numHealth )
+    {
+        currentHealth += numHealth;
     }
 
     public float getCurrentHealth()

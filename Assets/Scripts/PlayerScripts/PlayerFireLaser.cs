@@ -10,6 +10,8 @@ public class FireLaser : MonoBehaviour
     public int damage = 1;
     public float fireRate = 0.2f;    
     private float nextFireTime = 0f;
+    private float boostTime = 5f;
+    private float multiplier;
 
 
 
@@ -37,5 +39,21 @@ public class FireLaser : MonoBehaviour
         Instantiate( laserPrefab[0], spawnPosition, Quaternion.identity);
         Instantiate( laserPrefab[1], spawnPosition, Quaternion.identity);
         Instantiate( laserPrefab[2], spawnPosition, Quaternion.identity);
+    }
+
+    void IncreaseFireRate( int mult )
+    {
+        multiplier = mult;
+
+        // Increasing FireRate
+        fireRate /= multiplier;
+        StartCoroutine( DecreaseFireRate() );
+    }
+
+    private IEnumerator DecreaseFireRate()
+    {
+        yield return new WaitForSeconds( boostTime );
+
+        fireRate *= multiplier;
     }
 }
