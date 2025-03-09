@@ -20,15 +20,18 @@ public class AddPopup : MonoBehaviour
 
     private int addIndex;
 
-    public void ShowAdd(float targetTime, string extra)
+    public bool ShowAdd(float targetTime, string extra)
     {
-        ShowAdd(targetTime);
+        bool condition = ShowAdd(targetTime);
         extraText.text = extra;
+        return condition;
     }
 
-    public void ShowAdd(float targetTime)
+    public bool ShowAdd(float targetTime)
     {
-        if (_active) return;
+        if (_active || !_windowAnimator.GetCurrentAnimatorStateInfo(0).IsName("AddIdle")) {
+            return false;
+        }
         extraText.text = "";
         _startTime = Time.time;
         _targetTime = Time.time + targetTime;
@@ -49,6 +52,7 @@ public class AddPopup : MonoBehaviour
                 windows[i].SetActive(false);
             }
         }
+        return true;
     }
 
     private void UpdateContinueText()
