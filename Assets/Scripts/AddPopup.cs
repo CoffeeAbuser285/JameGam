@@ -15,6 +15,9 @@ public class AddPopup : MonoBehaviour
     private GameObject gameManager;
     public TMP_Text _continueText;
     public GameObject visible;
+    public List<GameObject> windows;
+
+    private int addIndex;
 
 
     public void ShowAdd(float targetTime)
@@ -28,6 +31,17 @@ public class AddPopup : MonoBehaviour
         visible.SetActive(true);
         jazz.Play();
         gameManager.GetComponent<AudioSource>().volume = 0f;
+
+        // add selection
+        addIndex ++;
+        if (addIndex >= windows.Count) addIndex = 0;
+        for (int i = 0; i < windows.Count; i++) {
+            if (i == addIndex) {
+                windows[i].SetActive(true);
+            } else {
+                windows[i].SetActive(false);
+            }
+        }
     }
 
     private void UpdateContinueText()
@@ -51,6 +65,11 @@ public class AddPopup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // DEBUG
+        // if (Time.time > 3.0f && Time.time < 5.0f && !_active) {
+        //     ShowAdd(10);
+        // }
+
         if (!_active) {
             if (_windowAnimator.GetCurrentAnimatorStateInfo(0).IsName("AddIdle")) {
                 // Debug.Log("Make invisible");
