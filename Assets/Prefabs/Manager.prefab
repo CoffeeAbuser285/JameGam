@@ -300,7 +300,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c1824d809a0e9a74ba17bb9b5280d872, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 278bc23fde93c8f4e9a6811d0cab36e2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
@@ -409,9 +409,20 @@ MonoBehaviour:
   - {fileID: 6442550401769641226}
   - {fileID: 6173052399435251538}
   - {fileID: 136337756682895484}
-  spawnInterval: 6
+  enemyLayers:
+  - Enemy1
+  - Enemy2
+  - Enemy3
+  - Enemy4
+  - Enemy5
+  - Enemy6
+  - Enemy7
+  - Enemy8
+  - Enemy9
+  - Enemy10
+  spawnInterval: 1
   spawnIntervalDecrease: 0.1
-  minimumSpawnInterval: 4
+  minimumSpawnInterval: 1
 --- !u!1 &7365335397358112877
 GameObject:
   m_ObjectHideFlags: 0
