@@ -40,6 +40,16 @@ public class UiManager : MonoBehaviour
         UpdateScoreUI();
     }
 
+    public int GetScore()
+    {
+        return score;
+    }
+
+    public float GetTime()
+    {
+        return timeElapsed;
+    }
+
     // Update the UI elements with current data
     private void UpdateScoreUI()
     {

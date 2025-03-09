@@ -454,14 +454,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -4411279328037982890, guid: 1d49391d9c436564db1ea01a8c7940f7, type: 3}
-      propertyPath: laserPrefab.Array.data[1]
-      value: 
-      objectReference: {fileID: 4484943637264005939, guid: a3fa455de1af36341b544ca9a48e9913, type: 3}
-    - target: {fileID: -4411279328037982890, guid: 1d49391d9c436564db1ea01a8c7940f7, type: 3}
-      propertyPath: laserPrefab.Array.data[2]
-      value: 
-      objectReference: {fileID: 4484943637264005939, guid: 964ac902dcebc0640b54fdc44c4226b8, type: 3}
     - target: {fileID: 18900826749212880, guid: 1d49391d9c436564db1ea01a8c7940f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.005585894
@@ -502,6 +494,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5090734058115124806, guid: 1d49391d9c436564db1ea01a8c7940f7, type: 3}
+      propertyPath: dataObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f307488fa7bf1c4d895e4c3fd3ad905, type: 2}
     - target: {fileID: 8552287477266572514, guid: 1d49391d9c436564db1ea01a8c7940f7, type: 3}
       propertyPath: m_Name
       value: PlayerShip_0
