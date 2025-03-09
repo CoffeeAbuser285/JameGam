@@ -19,7 +19,7 @@ public class ScrollBackground : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         backgroundImage.position += Vector3.down * scrollSpeed * Time.deltaTime;
 

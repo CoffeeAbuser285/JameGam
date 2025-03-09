@@ -8,6 +8,7 @@ public class PlayerLaserController : MonoBehaviour
     public float laserLifetime = 2f; // How long the laser lasts before being destroyed
     public int damage = 1;
     public float launchAngle = 30f;
+    public AudioSource despawnAudio;
     private Collider2D laserCollider;
 
     // Start is called before the first frame update
@@ -30,7 +31,7 @@ public class PlayerLaserController : MonoBehaviour
 
         // Changing to desired Angle
         transform.rotation = Quaternion.Euler(0, 0, launchAngle);
-
+        
         Destroy(gameObject, laserLifetime);
     }
 
@@ -43,7 +44,7 @@ public class PlayerLaserController : MonoBehaviour
     void OnTriggerEnter2D( Collider2D collider)
     {
         Health objectHealth = collider.gameObject.GetComponent<Health>();
-        Debug.Log("got a hit!");
+        
         // If player health exists and the object firing the laser is not the one being hit
         if ( objectHealth != null && collider.CompareTag("Enemy") ) 
         {
@@ -51,7 +52,10 @@ public class PlayerLaserController : MonoBehaviour
             Debug.Log("Enemy Took a hit of damage");
         }
 
+        //playing Sound
+        despawnAudio.Play();
+
         // Destroying laser
-        Destroy( gameObject );
+        Destroy( gameObject, despawnAudio.clip.length / 3 );
     }
 }
