@@ -428,6 +428,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395f29d34e8ef2e49937a9ec99923abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2032343691 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1680465397423624161, guid: 4d37814fc8c32cd45b5719af6ef151c8, type: 3}
+  m_PrefabInstance: {fileID: 291390412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &292428623175570207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -590,6 +595,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3155677677610435967, guid: 1d49391d9c436564db1ea01a8c7940f7, type: 3}
+      propertyPath: adCanvas
+      value: 
+      objectReference: {fileID: 2032343691}
     - target: {fileID: 18900826749212880, guid: 1d49391d9c436564db1ea01a8c7940f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.005585894
