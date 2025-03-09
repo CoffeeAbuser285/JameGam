@@ -10,6 +10,7 @@ public class AddPopup : MonoBehaviour
     private float _startTime;
     private float _targetTime;
     private bool _active;
+    private GameObject player;
 
     public AudioSource jazz;
     private GameObject gameManager;
@@ -67,6 +68,7 @@ public class AddPopup : MonoBehaviour
         _active = false;
         visible.SetActive(false);
         gameManager = GameObject.FindWithTag("GameManager");
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -81,9 +83,23 @@ public class AddPopup : MonoBehaviour
         if (!_active) {
             if (_windowAnimator.GetCurrentAnimatorStateInfo(0).IsName("AddIdle")) {
                 // Debug.Log("Make invisible");
-                visible.SetActive(false);
                 jazz.Stop();
                 gameManager.GetComponent<AudioSource>().volume = 0.2f;
+                visible.SetActive(false);
+
+                if ( extraText.text == "Health Boost" )
+                {
+                    // Adding One Health
+                    player.GetComponent<Health>().AddHealth( 1 );
+                }
+                else if ( extraText.text == "Increased FireRate" )
+                {
+                    // Increasing fire rate for 5 seconds
+                    player.GetComponent<PlayerFireLaser>().IncreaseFireRate( 2f );
+                }
+
+                extraText.text = "";
+
                 return;
             }
         };
