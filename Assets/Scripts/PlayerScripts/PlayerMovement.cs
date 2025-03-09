@@ -59,16 +59,10 @@ public class PlayerMovement : MonoBehaviour
     {
         // Get screen boundaries in world space
         Camera cam = Camera.main;
-        //float halfHeight = cam.orthographicSize;
-        //float halfWidth = halfHeight * cam.aspect;
+        screenBounds = cam.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, cam.transform.position.z));
 
         // Get the current position of the Rigidbody2D
         Vector2 currentPosition = rigidBody.position;
-
-        screenBounds = cam.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, cam.transform.position.z));
-
-        Debug.Log( screenBounds.x );
-        Debug.Log( screenBounds.y );
 
         float screenLeft = screenBounds.x * 0.58f; // constant
         float screenRight = -screenBounds.x * 0.58f;
