@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
 {
     public GameObject adCanvas; 
     public float initialHealth = 3f;
+    public AudioSource healthPickup;
     private float currentHealth = 3f;
     private bool isDead;
     private GameObject canvas;
@@ -118,6 +119,9 @@ public class Health : MonoBehaviour
     public void AddHealth( int numHealth )
     {
         currentHealth += numHealth;
+
+        // Play Health Audio
+        healthPickup.Play();
     }
 
     public float getCurrentHealth()
