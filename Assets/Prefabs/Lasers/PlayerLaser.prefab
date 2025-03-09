@@ -144,6 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserSpeed: 5
-  laserLifetime: 10
+  laserLifetime: 7
   damage: 1
   launchAngle: 0

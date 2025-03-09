@@ -7,9 +7,11 @@ public class Health : MonoBehaviour
     public float initialHealth = 3f;
     private float currentHealth = 3f;
     private bool isDead;
+    private GameObject canvas;
 
     public void Start()
     {
+        canvas = GameObject.FindWithTag( "Canvas" );
         currentHealth = initialHealth;
         isDead = false;
     }
@@ -18,6 +20,10 @@ public class Health : MonoBehaviour
     {
         if ( isDead == true )
         {
+            // Incrementing score on enemy or player death (yes, player death)
+            // Score is based on enemy health
+            canvas.GetComponent<UiManager>().AddScore( Mathf.FloorToInt(initialHealth ) );
+
             // Destroying self if dead
             Destroy( gameObject );
         }

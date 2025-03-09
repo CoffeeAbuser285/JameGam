@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 1360177507355695743}
   m_Layer: 0
   m_Name: Manager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -410,7 +410,7 @@ MonoBehaviour:
   - {fileID: 6173052399435251538}
   - {fileID: 136337756682895484}
   spawnInterval: 10
-  spawnIntervalDecrease: 0.1
+  spawnIntervalDecrease: 0.05
   minimumSpawnInterval: 5
 --- !u!1 &7365335397358112877
 GameObject:

@@ -165,8 +165,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab:
   - {fileID: 4484943637264005939, guid: 2cdcf1ecd349b164b8082beaeeb628c4, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4484943637264005939, guid: a3fa455de1af36341b544ca9a48e9913, type: 3}
+  - {fileID: 4484943637264005939, guid: 964ac902dcebc0640b54fdc44c4226b8, type: 3}
   laserSpawnPoint: {fileID: 18900826749212880}
   yAxisShift: 0.6
   damage: 1

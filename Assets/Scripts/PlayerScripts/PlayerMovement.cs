@@ -64,31 +64,30 @@ public class PlayerMovement : MonoBehaviour
         // Get the current position of the Rigidbody2D
         Vector2 currentPosition = rigidBody.position;
 
-        float screenLeft = -halfWidth;
-        float screenRight = halfWidth;
-        float screenBottom = -halfHeight;
-        float screenTop = halfHeight;
+        // TODO: This is adjusted for 16:9. Needs to be more flexible
+        float screenLeft = -halfWidth + 5.1f;
+        float screenRight = halfWidth - 5.1f;
+        float screenBottom = -halfHeight + 0.5f;
+        float screenTop = halfHeight - 0.5f;
 
         if (currentPosition.x < screenLeft)
         {
             currentPosition.x = screenLeft;
-            rigidBody.position = currentPosition;
         }
         else if (currentPosition.x > screenRight)
         {
             currentPosition.x = screenRight;
-            rigidBody.position = currentPosition;
         }
 
         if (currentPosition.y < screenBottom)
         {
             currentPosition.y = screenBottom;
-            rigidBody.position = currentPosition;
         }
         else if (currentPosition.y > screenTop)
         {
             currentPosition.y = screenTop;
-            rigidBody.position = currentPosition;
         }
+
+        rigidBody.position = currentPosition;
     }
 }

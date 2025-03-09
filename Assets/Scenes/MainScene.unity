@@ -262,7 +262,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6516428610197890014, guid: 0f66980664d4c1f46bb98df1e4689d43, type: 3}
       propertyPath: scrollSpeed
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8103914564553651575, guid: 0f66980664d4c1f46bb98df1e4689d43, type: 3}
       propertyPath: m_Name
@@ -369,6 +369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 6457389170894833482, guid: 37fc0e04ebb800543a7c18ebb9a5db35, type: 3}
+      propertyPath: m_TagString
+      value: GameManager
+      objectReference: {fileID: 0}
     - target: {fileID: 7351916721574481149, guid: 37fc0e04ebb800543a7c18ebb9a5db35, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -474,14 +478,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShip_0
       objectReference: {fileID: 0}
-    - target: {fileID: 8552287477266572514, guid: 1d49391d9c436564db1ea01a8c7940f7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8552287477266572514, guid: 1d49391d9c436564db1ea01a8c7940f7, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -581,7 +577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8502544281933215626, guid: 79e1b8b8888082d49b610af7bd91daae, type: 3}
       propertyPath: scrollSpeed
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -692,6 +688,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5094829728026201054, guid: fd1a64a619cca174e93f38788952fbff, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8197814407002119841, guid: fd1a64a619cca174e93f38788952fbff, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -702,6 +702,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8879723908487084652, guid: fd1a64a619cca174e93f38788952fbff, type: 3}
       propertyPath: m_Name
+      value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8879723908487084652, guid: fd1a64a619cca174e93f38788952fbff, type: 3}
+      propertyPath: m_TagString
       value: Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
