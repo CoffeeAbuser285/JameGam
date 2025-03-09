@@ -716,10 +716,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5094829728026201054, guid: fd1a64a619cca174e93f38788952fbff, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8197814407002119841, guid: fd1a64a619cca174e93f38788952fbff, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -730,10 +726,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8879723908487084652, guid: fd1a64a619cca174e93f38788952fbff, type: 3}
       propertyPath: m_Name
-      value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 8879723908487084652, guid: fd1a64a619cca174e93f38788952fbff, type: 3}
-      propertyPath: m_TagString
       value: Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []

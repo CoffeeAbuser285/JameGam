@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4450207217849399232}
   - component: {fileID: -4411279328037982890}
   - component: {fileID: -3155677677610435967}
+  - component: {fileID: 5090734058115124806}
   - component: {fileID: -5339485660098922972}
   m_Layer: 0
   m_Name: PlayerShip_0
@@ -184,6 +185,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialHealth: 10
+--- !u!114 &5090734058115124806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8552287477266572514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac5eb52beb48d0c43b421bede3d8f7c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &-5339485660098922972
 BoxCollider2D:
   m_ObjectHideFlags: 0

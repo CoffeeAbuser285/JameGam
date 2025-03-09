@@ -17,7 +17,7 @@ public class UiManager : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        healthBar.maxValue = player.GetComponent<Health>().getCurrentHealth();
+        healthBar.maxValue = player.GetComponent<Health>().getInitialHealth();
 
         // Initialize UI elements (if you want to set any starting text)
         UpdateScoreUI();
