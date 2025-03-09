@@ -11,6 +11,8 @@ public class AddPopup : MonoBehaviour
     private float _targetTime;
     private bool _active;
 
+    public AudioSource jazz;
+    private GameObject gameManager;
     public TMP_Text _continueText;
     public GameObject visible;
 
@@ -24,6 +26,8 @@ public class AddPopup : MonoBehaviour
         _active = true;
         UpdateContinueText();
         visible.SetActive(true);
+        jazz.Play();
+        gameManager.GetComponent<AudioSource>().volume = 0f;
     }
 
     private void UpdateContinueText()
@@ -41,21 +45,18 @@ public class AddPopup : MonoBehaviour
         _windowAnimator.SetBool("Open", false);
         _active = false;
         visible.SetActive(false);
+        gameManager = GameObject.FindWithTag("GameManager");
     }
 
     // Update is called once per frame
     void Update()
     {
-        // DEBUG
-        // if (Time.time > 3.0f && Time.time < 5.0f && !_active) {
-        //     Debug.Log("Showing Add");
-        //     ShowAdd(5.0f);
-        // }
-
         if (!_active) {
             if (_windowAnimator.GetCurrentAnimatorStateInfo(0).IsName("AddIdle")) {
                 // Debug.Log("Make invisible");
                 visible.SetActive(false);
+                jazz.Stop();
+                gameManager.GetComponent<AudioSource>().volume = 0.2f;
                 return;
             }
         };
