@@ -46,10 +46,11 @@ public class AddPopup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > 3.0f && Time.time < 5.0f && !_active) {
-            Debug.Log("Showing Add");
-            ShowAdd(5.0f);
-        }
+        // DEBUG
+        // if (Time.time > 3.0f && Time.time < 5.0f && !_active) {
+        //     Debug.Log("Showing Add");
+        //     ShowAdd(5.0f);
+        // }
 
         if (!_active) {
             if (_windowAnimator.GetCurrentAnimatorStateInfo(0).IsName("AddIdle")) {
@@ -62,7 +63,7 @@ public class AddPopup : MonoBehaviour
         UpdateContinueText();
         float timeLeft = _targetTime - Time.time;
         if (timeLeft <= 0.0) {
-            Debug.Log("Time expired");
+            // Debug.Log("Time expired");
             _windowAnimator.SetBool("Open", false);
             _active = false;
         }
