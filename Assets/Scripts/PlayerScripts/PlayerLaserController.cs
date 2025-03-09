@@ -56,6 +56,6 @@ public class PlayerLaserController : MonoBehaviour
         despawnAudio.Play();
 
         // Destroying laser
-        Destroy( gameObject, despawnAudio.clip.length / 3 );
+        Destroy( gameObject, despawnAudio.clip.length / 4 );
     }
 }

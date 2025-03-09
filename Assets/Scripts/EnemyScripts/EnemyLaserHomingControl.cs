@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyLaserRotationControl : MonoBehaviour
 {
+    public AudioSource despawnAudio;
+
     public float laserSpeed = 3f; // Speed at which the laser moves
     public float laserLifetime = 2f; // How long the laser lasts before being destroyed
     public int damage = 1;
@@ -54,8 +56,11 @@ public class EnemyLaserRotationControl : MonoBehaviour
             objectHealth.TakeDamage( damage );
             Debug.Log("Player Took a hit of damage");
 
+            //playing Sound
+            despawnAudio.Play();
+
             // Destroying laser
-            Destroy( gameObject );
+            Destroy( gameObject, despawnAudio.clip.length / 4 );
         }
     }
 
