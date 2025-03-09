@@ -16,13 +16,20 @@ public class AddPopup : MonoBehaviour
     public TMP_Text _continueText;
     public GameObject visible;
     public List<GameObject> windows;
+    public TMP_Text extraText;
 
     private int addIndex;
 
+    public void ShowAdd(float targetTime, string extra)
+    {
+        ShowAdd(targetTime);
+        extraText.text = extra;
+    }
 
     public void ShowAdd(float targetTime)
     {
         if (_active) return;
+        extraText.text = "";
         _startTime = Time.time;
         _targetTime = Time.time + targetTime;
         _windowAnimator.SetBool("Open", true);
@@ -67,6 +74,7 @@ public class AddPopup : MonoBehaviour
     {
         // DEBUG
         // if (Time.time > 3.0f && Time.time < 5.0f && !_active) {
+        //     // ShowAdd(10, "Drops Inbound!!");
         //     ShowAdd(10);
         // }
 
