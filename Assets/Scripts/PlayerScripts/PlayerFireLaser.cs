@@ -9,6 +9,7 @@ public class PlayerFireLaser : MonoBehaviour
     public float yAxisShift = 0.2f;
     public int damage = 1;
     public float fireRate = 0.2f;    
+    public AudioSource fireUpAudio;
     private float nextFireTime = 0f;
     private float boostTime = 5f;
     private float multiplier;
@@ -44,6 +45,7 @@ public class PlayerFireLaser : MonoBehaviour
         multiplier = mult;
 
         // Play FireRate Up Audio
+        fireUpAudio.Play();
 
         // Increasing FireRate
         fireRate = fireRate / multiplier;
