@@ -147,4 +147,4 @@ MonoBehaviour:
   laserLifetime: 7
   damage: 1
   rotationSpeedDeg: 90
-  homingDuration: 2
+  homingDuration: 1
