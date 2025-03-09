@@ -370,8 +370,12 @@ PrefabInstance:
       value: 6.6
       objectReference: {fileID: 0}
     - target: {fileID: 1360177507355695743, guid: 37fc0e04ebb800543a7c18ebb9a5db35, type: 3}
+      propertyPath: spawnInterval
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360177507355695743, guid: 37fc0e04ebb800543a7c18ebb9a5db35, type: 3}
       propertyPath: minimumSpawnInterval
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1360177507355695743, guid: 37fc0e04ebb800543a7c18ebb9a5db35, type: 3}
       propertyPath: spawnIntervalDecrease
@@ -392,10 +396,6 @@ PrefabInstance:
     - target: {fileID: 6457389170894833482, guid: 37fc0e04ebb800543a7c18ebb9a5db35, type: 3}
       propertyPath: m_Name
       value: Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6457389170894833482, guid: 37fc0e04ebb800543a7c18ebb9a5db35, type: 3}
-      propertyPath: m_TagString
-      value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 7351916721574481149, guid: 37fc0e04ebb800543a7c18ebb9a5db35, type: 3}
       propertyPath: m_LocalPosition.x
