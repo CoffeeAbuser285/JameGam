@@ -13,17 +13,7 @@ public class PlayerDead : MonoBehaviour
         canvas = GameObject.FindWithTag( "Canvas" );
     }
 
-// Update is called once per frame
-    void Update()
-    {
-        if( GetComponent<Health>().checkIfDead() )
-        {
-            SaveData();
-            DeathLogic();
-        }
-    }
-
-    private void DeathLogic()
+    public void DeathLogic()
     {
         // Blow up main character
         // Wait 2 seconds
@@ -31,7 +21,7 @@ public class PlayerDead : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    private void SaveData()
+    public void SaveData()
     {
         dataObject.finalScore = canvas.GetComponent<UiManager>().GetScore();
         dataObject.timeElapsed = canvas.GetComponent<UiManager>().GetTime();

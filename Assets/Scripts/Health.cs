@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
+    public GameObject adCanvas; 
     public float initialHealth = 3f;
     private float currentHealth = 3f;
     private bool isDead;
@@ -76,8 +78,22 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        StartCoroutine(UpdateColor());
+        StartCoroutine( UpdateColor() );
         checkIfDead();
+
+        if ( gameObject.CompareTag("Player") )
+        {
+            if ( currentHealth > 0 )
+            {
+                StartCoroutine( ShowAd() );
+            }
+            else
+            {
+                GetComponent<PlayerDead>().SaveData();
+                GetComponent<PlayerDead>().DeathLogic();
+            }
+        }
+        
     }
 
     public bool checkIfDead()
@@ -86,8 +102,13 @@ public class Health : MonoBehaviour
         {
             isDead = true;
         }
-
         return isDead;
+    }
+
+    private IEnumerator ShowAd()
+    {   
+        yield return null;
+        adCanvas.GetComponent<AddPopup>().ShowAdd( 5f );
     }
 
     public float getCurrentHealth()

@@ -8,6 +8,7 @@ TagManager:
   - GameManager
   - Canvas
   - NoColorChange
+  - Ad
   layers:
   - Default
   - TransparentFX
